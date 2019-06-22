@@ -36,6 +36,15 @@ export class CalculatorComponent implements OnInit {
 		const deleteTodo = (todo) => localStorage
 			.setItem(storageKey, convertObjToString(getTodos().filter(_todo => _todo !== todo)));
 
+//This function will play Homer Simpson's saying "Woohoo!" when a user comfirms
+//he/she/they has/have completed a task.
+		const playAudio = () => {
+			const woohoo = new Audio();
+			woohoo.src = "../../../assets/audio/woohoo.wav";
+			woohoo.load();
+			woohoo.play();
+		};
+
 //Build a to-do element and return it.
 		const buildTodoEl = (todo) => {
 			//Create a list item element.
@@ -83,6 +92,7 @@ export class CalculatorComponent implements OnInit {
 					//delete it and refresh the to-do list.
 					if(window.confirm('Have you completed this task? ' + todo)) {
 						deleteTodo(todo);
+						playAudio();
 						displayTodos();
 					}
 				});
