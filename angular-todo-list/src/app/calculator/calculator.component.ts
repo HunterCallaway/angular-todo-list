@@ -58,7 +58,7 @@ export class CalculatorComponent implements OnInit {
 
 //This function clears what the user enters in the input area.
 //Grab the value attribute of the new-to-do-input id and set it equal to an empty string.
-		const clearInput = () => document.getElementById('new-todo-input').value = '';
+		const clearInput = () => (<HTMLInputElement> document.getElementById('new-todo-input')).value = '';
 
 		const displayTodos = () => {
 			clearInput();
@@ -75,8 +75,10 @@ export class CalculatorComponent implements OnInit {
 			Array.from(document.getElementsByClassName('list-group-item')).forEach(item => {
 				//Add a click event listener.
 				item.addEventListener('click', (e) => {
+					//Set e.target to an HTMLElement to avoid TypeScript issues.
+					const input = e.target as HTMLElement;
 					//Figure out which to-do was clicked.
-					const todo = e.target.innerText;
+					const todo = input.innerText;
 					//If the user confirms he/she/they want(s) to delete task,
 					//delete it and refresh the to-do list.
 					if(window.confirm('Have you completed this task? ' + todo)) {
@@ -94,11 +96,11 @@ export class CalculatorComponent implements OnInit {
 			//Grab the input area by its ID.
 			const newTodoInput = document.getElementById('new-todo-input');
 			//Check to see if something has been entered into the input area.
-			if(newTodoInput.value) {
+			if((<HTMLInputElement> newTodoInput).value) {
 				//If the conditional statement passes,
 				// add the input as a list item, trim any whitespace from the beginning and/or end,
 				// and refresh the to-do list.
-				addTodo(newTodoInput.value.trim());
+				addTodo((<HTMLInputElement> newTodoInput).value.trim());
 				displayTodos();
 			}
 		});
