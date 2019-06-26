@@ -46,7 +46,7 @@ export class CalculatorComponent implements OnInit {
 		};
 
 //This function utilizes the Angular version
-// of the Sortable library (https://www.npmjs.com/package/angular-sortablejs)
+//of the Sortable library (https://www.npmjs.com/package/angular-sortablejs)
 //to allow the user to re-arrange the list items in order of priority.
 
 
