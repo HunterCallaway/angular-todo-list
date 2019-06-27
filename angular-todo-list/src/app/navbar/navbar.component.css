@@ -1,10 +1,9 @@
 header {
-	background: darkgoldenrod;
 	font-family: Helvetica sans-serif;
 }
 
 header nav {
-	justify-self: right;
+
 }
 
 header nav ul {
@@ -23,5 +22,5 @@ header nav a {
 }
 
 header nav a:hover {
-	background: aquamarine;
+	background: ivory;
 }
