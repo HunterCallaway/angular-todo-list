@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-	selector: 'app-calculator',
-	templateUrl: './calculator.component.html',
-	styleUrls: ['./calculator.component.css']
+	selector: 'app-todo',
+	templateUrl: './todo.component.html',
+	styleUrls: ['./todo.component.css']
 })
-export class CalculatorComponent implements OnInit {
+export class TodoComponent implements OnInit {
 
 	constructor() {
 	}
