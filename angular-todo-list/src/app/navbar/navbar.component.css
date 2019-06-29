@@ -2,10 +2,6 @@ header {
 	font-family: Helvetica sans-serif;
 }
 
-header nav {
-
-}
-
 header nav ul {
 			list-style-type: none;
 			margin: 0;
@@ -22,5 +18,5 @@ header nav a {
 }
 
 header nav a:hover {
-	background: ivory;
+	background: rgba(255, 255, 255, 0.5);
 }
