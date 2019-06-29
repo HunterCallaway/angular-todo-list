@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CalculatorComponent} from "./calculator/calculator.component";
+import {TodoComponent} from "./todo/todo.component";
 import {AboutComponent} from "./about/about.component";
 
 const routes: Routes = [
-  {path: '', component: CalculatorComponent},
+  {path: '', component: TodoComponent},
   {path: 'about', component: AboutComponent}
 ];
 
