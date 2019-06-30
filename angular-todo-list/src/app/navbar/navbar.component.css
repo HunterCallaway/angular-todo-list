@@ -1,4 +1,4 @@
-header {
+/*header {
 	font-family: Helvetica sans-serif;
 }
 
@@ -10,13 +10,13 @@ header nav ul {
 
 header nav li {
 	float: left;
+}*/
+
+.navbar-nav a {
+	/*padding: 1.5rem;*/
+	font-size: 1.5rem;
 }
 
-header nav a {
-	padding: 1.5rem;
-	font-size: 1.2rem;
-}
-
-header nav a:hover {
-	background: rgba(255, 255, 255, 0.5);
-}
+/*.navbar-nav a:hover {*/
+	/*background: rgba(255, 255, 255, 0.5);*/
+/*}*/
