@@ -45,11 +45,6 @@ export class TodoComponent implements OnInit {
 			woohoo.play();
 		};
 
-//This function utilizes the Angular version
-//of the Sortable library (https://www.npmjs.com/package/angular-sortablejs)
-//to allow the user to re-arrange the list items in order of priority.
-
-
 //Build a to-do element and return it.
 		const buildTodoEl = (todo) => {
 			//Create a list item element.
