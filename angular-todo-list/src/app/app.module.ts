@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {TodoComponent} from "./todo/todo.component";
-import {NgDragDropModule} from "ng-drag-drop";
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import {NgDragDropModule} from "ng-drag-drop";
   imports: [
     BrowserModule,
     AppRoutingModule,
-     NgDragDropModule.forRoot()
+     DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
