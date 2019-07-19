@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
 	selector: 'app-todo',
@@ -8,7 +7,25 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 })
 export class TodoComponent implements OnInit {
 
-	constructor() {
+	//Define the to-do variable.
+	todo = {
+		name: '',
+		id: 0
+	};
+	//Define the to-dos variable to hold the to-dos entered.
+	todos = [];
+
+	//This method will handle submitting new to-do entries.
+	onClick() {
+		//Check the id to see if this entry already exists or is new.
+		if(this.todo.id === 0) {
+			//If the entry is new, add it to the list of to-dos
+			//and give it a unique timestamp.
+			this.todos.push({id: (new Date()).getTime(), name: this.todo.name});
+		}
+	}
+
+	/*constructor() {
 	}
 
 	ngOnInit() {
@@ -115,6 +132,6 @@ export class TodoComponent implements OnInit {
 				displayTodos();
 			}
 		});
-	}
+	}*/
 
 }
