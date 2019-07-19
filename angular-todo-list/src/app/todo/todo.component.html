@@ -2,9 +2,13 @@
 	<h1 class="small-bottom-margin" id="header">Angular To-Do List</h1>
 	<p>Once you've finished a task, simply click it and confirm deletion.</p>
 	<div id="new-todo-form-container" class="small-bottom-margin">
-		<input type="text" class="form-control" id="new-todo-input" />
-		<button class="btn btn-primary" id="submit-new-todo-btn">Submit</button>
+		<input type="text" class="form-control" id="new-todo-input" [(ngModel)]="todo.name"  />
+		<button class="btn btn-primary" id="submit-new-todo-btn" (click)="onClick()">Submit</button>
 	</div>
 	<!-- <button class="btn btn-danger" id="reset-local-storage-btn">Reset Local Storage</button> -->
-	<ul id="todo-list-container" class="list-group"></ul>
+	<ul id="todo-list-container" class="list-group">
+		<li *ngFor="let todo of todos">
+			<span (click)="onEdit(todo)" id="edit-button">Edit</span>
+		</li>
+	</ul>
 </div>

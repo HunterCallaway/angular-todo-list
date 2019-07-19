@@ -41,3 +41,7 @@
 #todo-list-container li:hover {
 	background-color: gray;
 }
+
+#edit-button {
+	float: right;
+}

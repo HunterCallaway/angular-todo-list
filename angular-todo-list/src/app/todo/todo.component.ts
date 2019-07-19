@@ -5,7 +5,7 @@ import {Component, OnInit} from '@angular/core';
 	templateUrl: './todo.component.html',
 	styleUrls: ['./todo.component.css']
 })
-export class TodoComponent implements OnInit {
+export class TodoComponent {
 
 	//Define the to-do variable.
 	todo = {
@@ -23,7 +23,17 @@ export class TodoComponent implements OnInit {
 			//and give it a unique timestamp.
 			this.todos.push({id: (new Date()).getTime(), name: this.todo.name});
 		}
+		//Reset the to-do variable and clear the input field.
+		this.todo = {
+			name: '',
+			id: 0
+		};
 	}
+
+	//This method allows users to edit entries.
+/*	onEdit(item) {
+		this.todo = item;
+	}*/
 
 	/*constructor() {
 	}
