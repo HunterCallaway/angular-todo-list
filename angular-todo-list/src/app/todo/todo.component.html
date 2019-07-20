@@ -3,14 +3,14 @@
 	<p>Once you've finished a task, simply click it and confirm deletion.</p>
 	<div id="new-todo-form-container" class="small-bottom-margin">
 		<input type="text" class="form-control" id="new-todo-input" [(ngModel)]="todo.name"  />
-		<button class="btn btn-primary" id="submit-new-todo-btn" (click)="onClick()">Submit</button>
+		<button class="btn btn-primary" id="submit-new-todo-btn" (click)="onClick()">OK</button>
 	</div>
 	<!-- <button class="btn btn-danger" id="reset-local-storage-btn">Reset Local Storage</button> -->
 	<ul id="todo-list-container" class="list-group">
 		<li *ngFor="let todo of todos" class="list-group-item">
 			<span>{{todo.name}}</span>
 			<span><button class="btn btn-warning btn-xs float-right" (click)="onEdit(todo)">Edit</button></span>
-			<span><button class="btn btn-danger btn-xs float-right" (click)="onDelete(todo)">Delete</button></span>
+			<span><button class="btn btn-danger btn-xs" (click)="onDelete(todo)">Delete</button></span>
 		</li>
 	</ul>
 </div>

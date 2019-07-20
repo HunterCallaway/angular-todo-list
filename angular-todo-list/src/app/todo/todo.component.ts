@@ -32,7 +32,19 @@ export class TodoComponent {
 
 	//This method allows the user to edit entries.
 	onEdit(item) {
+		//Clicking the Edit button triggers a dialog box.
+		alert("Once you finish editing the entry, click the OK button to save changes.");
+		//Set the to-do variable to the passed-in item.
 		this.todo = item;
+	}
+
+	//This function will play Homer Simpson's saying "Woohoo!" when a user comfirms
+	//he/she/they has/have completed a task.
+	playAudio() {
+		const woohoo = new Audio();
+		woohoo.src = "../../../assets/audio/woohoo.wav";
+		woohoo.load();
+		woohoo.play();
 	}
 
 	//This method allows the user to delete an entry.
@@ -42,8 +54,9 @@ export class TodoComponent {
 			//Check the to-do item list against the clicked item id.
 			if(item.id === this.todos[i].id) {
 				//If it matches the item in the to-dos list,
-				//remove the item using the splice method and stop.
+				//remove the item using the splice method, call the playAudio method, and stop.
 				this.todos.splice(i, 1);
+				this.playAudio();
 				break;
 			}
 		}
