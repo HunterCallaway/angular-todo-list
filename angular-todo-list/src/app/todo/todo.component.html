@@ -8,7 +8,7 @@
 	<!-- <button class="btn btn-danger" id="reset-local-storage-btn">Reset Local Storage</button> -->
 	<ul id="todo-list-container" class="list-group">
 		<li *ngFor="let todo of todos">
-			<span (click)="onEdit(todo)" id="edit-button">Edit</span>
+			<span (click)="onEdit(todo)">{{todo.name}}</span>
 		</li>
 	</ul>
 </div>

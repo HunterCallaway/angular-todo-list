@@ -9,6 +9,8 @@ import {TodoComponent} from "./todo/todo.component";
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {FormsModule} from "@angular/forms";
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
      DragDropModule,
-     FormsModule
+     FormsModule,
+     NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

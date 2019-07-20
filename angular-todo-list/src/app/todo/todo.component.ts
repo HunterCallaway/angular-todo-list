@@ -31,9 +31,13 @@ export class TodoComponent {
 	}
 
 	//This method allows users to edit entries.
-/*	onEdit(item) {
-		this.todo = item;
-	}*/
+	onEdit(id: number) {
+		let title = this.todo[id].name;
+		let result = prompt("Edit the entry.", title);
+		if (result !== null && result !== '') {
+			this.todo[id].name = result;
+		}
+	}
 
 	/*constructor() {
 	}
