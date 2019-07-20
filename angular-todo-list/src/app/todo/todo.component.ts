@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
 	selector: 'app-todo',
@@ -61,6 +62,13 @@ export class TodoComponent {
 			}
 		}
 	}
+
+	//This Drag and Drop method is taken from Angular Material's documentation.
+	drop(event: CdkDragDrop<string[]>) {
+		moveItemInArray(this.todos, event.previousIndex, event.currentIndex);
+	}
+
+
 
 	/*constructor() {
 	}
