@@ -10,6 +10,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import {FormsModule} from "@angular/forms";
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
      DragDropModule,
      FormsModule,
-     NgbModule
+     NgbModule,
+     AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

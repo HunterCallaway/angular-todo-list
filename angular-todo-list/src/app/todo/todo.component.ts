@@ -30,12 +30,22 @@ export class TodoComponent {
 		};
 	}
 
-	//This method allows users to edit entries.
-	onEdit(id: number) {
-		let title = this.todo[id].name;
-		let result = prompt("Edit the entry.", title);
-		if (result !== null && result !== '') {
-			this.todo[id].name = result;
+	//This method allows the user to edit entries.
+	onEdit(item) {
+		this.todo = item;
+	}
+
+	//This method allows the user to delete an entry.
+	onDelete(item) {
+		//Iterate over the list of to-dos.
+		for (let i = 0; i < this.todos.length; i++) {
+			//Check the to-do item list against the clicked item id.
+			if(item.id === this.todos[i].id) {
+				//If it matches the item in the to-dos list,
+				//remove the item using the splice method and stop.
+				this.todos.splice(i, 1);
+				break;
+			}
 		}
 	}
 
