@@ -1,8 +1,7 @@
 #main {
-	width: 520px;
-	margin-left: calc(50% - 260px);
+	width: 450px;
 	background-color: rgba(255, 255, 255, 0.5);
-	margin-top: 50px;
+	margin: 50px auto auto auto;
 	padding: 20px;
 	box-shadow: 2px 2px 5px black;
 	border-radius: 5px;
@@ -10,27 +9,32 @@
 
 #todo-list-container {
 	overflow-y: auto;
-	height: 450px;
+	height: 400px;
 }
 
 .small-bottom-margin {
 	margin-bottom: 15px;
 }
 
-#header {
+h1 {
 	text-align: center;
 }
 
-#new-todo-input {
-	width: 400px;
-	position: relative;
-	display: inline-block;
+p {
+	text-align: center;
+}
+
+#new-todo-form-container {
+	width: 300px;
+	display: flex;
+	align-items: center;
 	background-color: rgba(255, 255, 255, 0.7);
 }
 
 #submit-new-todo-btn {
 	float: right;
-	width: 75px;
+	margin-left: 10px;
+	width: 50px;
 }
 
 #todo-list-container li {
