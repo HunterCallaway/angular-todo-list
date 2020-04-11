@@ -27,6 +27,7 @@
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
     "handlebars": "^4.7.6",
+    "kind-of": "^6.0.3",
     "lodash": "^4.17.15",
     "ng-drag-drop": "^5.0.0",
     "ngx-sortable": "^1.0.3",
