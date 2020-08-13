@@ -36,7 +36,7 @@
     "ngx-webstorage-service": "^4.1.0",
     "npm-upgrade": "^2.0.3",
     "rxjs": "~6.5.5",
-    "serialize-javascript": "^3.0.0",
+    "serialize-javascript": "^3.1.0",
     "sortablejs": "^1.10.2",
     "tslib": "^1.11.2",
     "zone.js": "~0.10.3"
