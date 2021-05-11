@@ -29,7 +29,7 @@
     "handlebars": "^4.7.6",
     "https-proxy-agent": "^5.0.0",
     "kind-of": "^6.0.3",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "minimist": "^1.2.5",
     "ng-drag-drop": "^5.0.0",
     "ngx-sortable": "^1.0.3",
